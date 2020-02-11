@@ -13,8 +13,9 @@
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
   
-  // looping 
+  // looping to access the values in array
   for (var i = 0; i < array.length;  i++){
+      // to print the values console.log array[i]
   console.log(array[i]);
   
   
@@ -28,7 +29,9 @@ function printArrayValues(array) {
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
   
+  // to print values in reverse we have to access our array first, create a stoping condition, then deincrement
      for (var i = array.length - 1; i >= 0; i--) {
+         // to print the values console.log array[i]
         console.log(array[i]);
        
   }
@@ -41,7 +44,7 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  // to get object keys we can use object property Object.keys() this turns an Object into an array
     return Object.keys(object);
   
   
@@ -70,9 +73,11 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  // create a container to hold results
    let values = [];
+   // loop of object using for in loop
    for (let key in object){
+       // push object[key] in the container values
     values.push(object[key]);
 }
 return values;
@@ -89,7 +94,9 @@ return values;
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
   
+  // use for in loop to access values in object
    for (var key in object){
+       // print values to console
     console.log(object[key]);
   }
   
@@ -103,6 +110,7 @@ function printObjectValues(object) {
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
   
+  // using .length we can access the length on Object.Keys()
    return Object.keys(object).length;
   
   
@@ -115,11 +123,14 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
+  // create an empty container to hold result
    var myArray = [];
+   // use for in loop for object to gain access to it values
     for(var keys in object) {
+        // push the values into the container we created
         myArray.push(object[keys]);
     }
+    // to print values in reverse we have to access our array first, create a stoping condition, then deincrement
     for(var i = myArray.length-1; i >= 0; i--) {
         console.log(myArray[i]); // I changed this from keys[i]
     }

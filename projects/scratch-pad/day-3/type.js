@@ -14,7 +14,7 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
+    // we can check if an array is an array using isArray method
     return Array.isArray(value);
     
     
@@ -93,14 +93,14 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
+    // check if array is array if so return 'array'
     if (Array.isArray(value)){
          return "array";
-     }else if (value === null){
+     }else if (value === null){ // check if value is strictly equal to null, if so return null
          return "null";
-     }else if (value instanceof Date){
+     }else if (value instanceof Date){ // check to see if value is a date using intanceof 
           return "date";
-     }else {
+     }else { // return the typeof value
         return typeof value;
    
  }  

@@ -67,7 +67,6 @@ function makeContactList() {
         addContact: function(obj){
             contacts.push(obj);
         },
-        
         findContact: function(fullName){
             //loop to access a certain index in array
             //compare nameFirst and nameLast to fullName
@@ -80,9 +79,48 @@ function makeContactList() {
                   }
                 }
                 return undefined;
+            },
+
+
+ removeContact: function(contact){
+     // loop over our contact array
+        for(var i = 0; i < contacts.length; i++){
+            // check the values are the same as contact
+           if(contacts[i] === contact) {
+        return contacts.splice(i, 1);
+           }
         }
-};
-}
+    },
+    find: function(fullName) {
+        //loop over contacts to access the array 
+        for(var i = 0; i < contacts.length; i++) {
+            // compare values 
+            if(fullName === contacts[i]["nameFirst"] + " " + contacts[i]["nameLast"]) {
+                // return contacts
+            return contacts[i];
+            }
+        }
+    },
+    printAllContactNames: function(){
+                var newStr = ""; // create an empty string
+        console.log(contacts);
+        // loop over conctacts 
+        for (var i = 0; i < contacts.length; i++){
+            // create a full name var where we will hold our values for our loop into
+            var fullName = contacts[i]["nameFirst"] + " " + contacts[i]["nameLast"];
+            // check if our increment stricly equals to the length of contacts 
+            if (i === contacts.length - 1 ){
+                newStr += fullName;
+               
+            }else { // default to newStr concat with fullName
+                newStr += fullName + '\n';
+            }
+        }  
+       
+      return newStr
+    }
+    };    
+   }
 
    
 

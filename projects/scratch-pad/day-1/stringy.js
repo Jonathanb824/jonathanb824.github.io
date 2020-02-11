@@ -191,11 +191,13 @@ if (stringOne.length > stringTwo.length){
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+// checking if stringOne is greater than StringTwo using the greater than operator
 if (stringOne > stringTwo){
       return -1;
+      //checking if stringTwo is greater than stringOne using the greather than operator 
   }else if (stringTwo > stringOne){
         return 1;
+        // if neither returns true return 0
     }else {
         return 0;
     }

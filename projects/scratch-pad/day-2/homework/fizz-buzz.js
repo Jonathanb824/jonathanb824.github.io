@@ -12,8 +12,9 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
-
+// create a range of numbers using a for loop
 for (var i = 1; i <= 100; i++) {
+    // we will console.log fizz for every thrid increment and Buzz for every 5th. using the remainder assigment 
   console.log({
     truefalse: 'Fizz',
     falsetrue: 'Buzz',
