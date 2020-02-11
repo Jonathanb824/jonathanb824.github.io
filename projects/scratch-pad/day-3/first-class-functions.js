@@ -40,19 +40,18 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    //return a function that takes a given value
-    // inside of the function test if the given function is greater than the base 
-    // if so return true 
-    // else return false 
-    return function(letter){
-        if(startsWith.toLowerCase() === letter.toLowerCase()){
-            return true;
-        } else {
+    
+     //given a character(startsWith)
+    //returning a function testing the first character to a string
+    //testing if the character is the same as the character in the string
+    return string =>{
+        if (startsWith.toLowerCase() === string[0].toLowerCase()){
+        return true;
+        }else {
             return false;
         }
+       
     };
-    
-    
     
     
     // YOUR CODE ABOVE HERE //
@@ -66,7 +65,16 @@ function createStartsWithFilter(startsWith) {
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     
-    
+    // create a function that test if a string ends with character and return it
+     return string =>{
+         // to check I will an if statement 
+        if (endsWith.toLowerCase() === string[string.length-1].toLowerCase()){
+        return true;
+        }else {
+            return false;
+        }
+       
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -82,7 +90,14 @@ function createEndsWithFilter(endsWith) {
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
     
-    
+       var newArr = [];// create a container to hold the restult of the test on strings
+       // using a for loop, loop through the string to access characters at each index
+    for (var i = 0; i < strings.length; i++){
+        // push the result into the newArr calling the test on them at the sametime
+        newArr.push(modify(strings[i]));
+    }// return newArr
+    return newArr;
+   
     
     
     // YOUR CODE ABOVE HERE //
