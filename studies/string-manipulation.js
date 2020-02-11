@@ -8,9 +8,9 @@ Several ways/methods exist to manipulate a string.
 
 /*You can Manipulate strings with operators*/
 
-var age = 35;
-var info = 
-console.log(info);
+var name = "Super JB";
+var about = "Hi my name is + name ";
+console.log(about);
 
 
 
@@ -26,16 +26,16 @@ console.log(info);
 This method combines two strings together.
 Example:
 */
-var greet = 'Hello, ';
-console.log(greet.concat('Kandice', '. Enjoy your day.'));
-// "Hello Kandice. Enjoy your day."//
+var salute = 'Hi, ';
+console.log(salute.concat('Super JB', '. Peace be to you.'));
+// "Hi, Super JB. Peace be to you."//
 
 /*String.prototype.slice()
-*This method removes part of a string.
+*This method takes away parts from a string and retun the a string with the elements that was remove.
 *Example:
 */
-var str = "Good morning!";
-console.log(str.slice(0, 4)); // Good //
+var str = "Grand Rising!";
+console.log(str.slice(0, 4)); // Grand //
 
 /*String.prototype.split()
 *This method splits a String object into an array of strings by separating the

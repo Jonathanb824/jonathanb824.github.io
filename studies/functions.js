@@ -55,7 +55,7 @@ specify outputs by what we want the Function to return.
 
 /*Scope: Functions can see and modify variables in parent or global scopes.
 The inverse is NOT true.
-*Any variable declared outside of a function belongs to the global scope,
+*A variable declared outside will be in the global scope,
 *and is therefore accessible from anywhere in your code.
 *Each function has its own scope, and any variable declared within that
 *function is only accessible from that function and any nested functions. *
