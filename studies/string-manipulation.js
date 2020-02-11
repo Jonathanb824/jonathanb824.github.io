@@ -12,7 +12,9 @@ var name = "Super JB";
 var about = "Hi my name is + name ";
 console.log(about);
 
-
+//  String -> concatenation with the += operator
+var num1 = 21
+num1 += 'fire' // "21fire"
 
 
 
@@ -38,33 +40,32 @@ var str = "Grand Rising!";
 console.log(str.slice(0, 4)); // Grand //
 
 /*String.prototype.split()
-*This method splits a String object into an array of strings by separating the
-*string into substrings.
+*This method converts a string into an array making string into substrings 
 *Example:
 */
-var str1 = "How is the weather?";
-console.log(str1.split(" "));  // ["How", "is", "the", "weather?"] //
+var string1 = "Is it cold out?";
+console.log(string1.split(" "));  // ["Is", "it", "cold", "out?"] //
 //splits the string into an array of individual strings//
 
 
 /*String.prototype.toLowerCase()
-*The method returns the string value converted to lower case.
+*The method force a string to retun in lowerCase.
 *Example:
 */
-var str2 = "Good Night!";
-console.log(str2.toLowerCase(" ")); // "good night!" //
+var string2 = "Music make me lose control!";
+console.log(string2.toLowerCase(" ")); // "music makes me lose control!" //
 
 
 /*String.prototype.toUpperCase()
-*This method returns the string value converted to uppercase.
+*This method force a string to uppercase.
 *Example:
 */
-var str3 = "good afternoon!";
-console.log(str3.toUpperCase(" ")); //"GOOD AFTERNOON!" //
+var string3 = "grand rising!";
+console.log(string3.toUpperCase(" ")); //"GRAND RISING!" //
 
 /*string.length()
-*Tells us the length of the string.
+*This method let us know how many charaters are in our string.
 *Example
 */
-var str4 = "Hello World!";
-console.log(str4.length); // 12 //
+var string4 = "Today is a good day!";
+console.log(string4.length); // 20 //

@@ -36,6 +36,7 @@ timesByNum() (10,12); // returns 120//
 
 
 /*How do we assign a function to a variable? Yes it is also known as Function Expression”*/
+// We can assign a function to a variable using the keyword var. Creating a function expression
 var express = function() {
 
 };
@@ -43,7 +44,7 @@ var express = function() {
 
 
 
-/*Functions can OPTIONALLY take inputs, and OPTIONALLY return a single value.
+/*Functions, have place holders call paramsers that can and OPTIONALLY be used. It also can OPTIONALLY return a single value.
 How do we specify inputs, and how do we specify outputs?
 * We can specify inputs by counting parameters. You can
 specify outputs by what we want the Function to return.
@@ -53,36 +54,41 @@ specify outputs by what we want the Function to return.
 
 
 
-/*Scope: Functions can see and modify variables in parent or global scopes.
-The inverse is NOT true.
-*A variable declared outside will be in the global scope,
-*and is therefore accessible from anywhere in your code.
-*Each function has its own scope, and any variable declared within that
-*function is only accessible from that function and any nested functions. *
+/*Scope: Functions create local scopes that that parameters and variables defined in it
+can only be used within that function, and are not visible to Global Scope.
+
+*Variables that are declared in the global scope can be access within the local scope.
+*and is accessible from anywhere in your code.
+*
 */
+// example 
+
+var weather = 70;
+function newDay(sunny){
+    if (sunny < weather){
+        console.log("stay inside!"); // "Stay inside" prints. As we see we are using a global var inside our local scope with out local parameter
+    }
+}
+
+console.log(sunny)// we will get undifined becuase sunny is inside the local scope and can not be access outside it
 
 
-
-
-/*Closures: Functions form closures around the data they house.
+/*Closures: Functions that protects data. Or another way of saying it.
+Closures are used frequently for object data privacy.
+A closure can be look at as nested combonation of functions, (enclosed) with references to its surrounding form.  
 *If an object returned from the Function and is held in memory
 *somewhere (referenced), that closure stays ALIVE, and data can continue to
-*exist in these closures! (See: our meeting-room app for an example!)
-*(ALSO, see: Understanding JavaScript Closures with Ease)
-*When functions in JavaScript execute, they use the same scope chain
-*that was in effect when they were created. This means that even after the outer
-*function has returned, the inner function still has access to the outer
-*function’s variables. Therefore, you can call the inner function
-*later in your program.
+*exist in these closures!
+
 * For example:
 */
 
-function under() {
-   var b = 40;
-   function over() {
+function above() {
+   var l = 40;
+   function moon() {
        
-         var a = 80;
-         console.log(a + b);
+         var d = 80;
+         console.log(l + d);
     }
-   return over;
+   return moon;
 }

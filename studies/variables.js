@@ -37,18 +37,19 @@ myVariable = "someString";
 /** We can declare and assign a variable using three keywords
  * var, let, const 
  */
+// Note: That we can delcare a variable using var, let and const.
 
 // For example
 
-var firstName;
+var firstName; // varibales using var belong to the global scope if they are not created in a local scope. variables that are declare with var are hoisted to the top of code
 
-let middleName;
+let middleName; // When we delcare with let, let is confined to the local scope. The difference between var and let, is that let is initialized to a value only when assign.
+               //  Accessing the variable before the initialization results in a ReferenceError
 
-const lastName = "Brown"; 
-
-// Note: That we can delcare a variable using var, let and const. Notice how const have to be declare and initialized at the same time
+const lastName = "Brown"; //  Notice how const have to be declare and initialized at the same time
 // That's because const can not be change/ re-assign or re-delcared. It is constant
 
-// When we delcare with let, we can re-assign it but it is confine to a local scoope.  
-// Meaning let variables are not initialized until their definition is evaluated. Accessing the variable before the initialization results in a ReferenceError
+
+  
+
 
