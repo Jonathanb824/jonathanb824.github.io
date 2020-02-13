@@ -38,7 +38,7 @@ console.log(name); // returns "Super JB" because using the basic assigment opera
 
 // Assuming the following variables
 //  var spark = 'fire'
-//  var num1 = 21
+  var num1 = 21
 
 
 // Number + Number -> addition
@@ -132,6 +132,8 @@ divides(10,5) // returns 2
 
 /* The increment ++ operator is the operator that adds one to the value.*/
 //Example
+var a = 5;
+var b = 2;
 
 if (a > b) {
     for (var i = 0; i < 10; i++ ){

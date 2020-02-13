@@ -31,7 +31,7 @@ they be literal data.
 function timesByNum(a,b){
     return a * b;
 }
-timesByNum() (10,12); // returns 120//
+timesByNum(10,12); // returns 120//
 
 
 
@@ -70,7 +70,7 @@ function newDay(sunny){
     }
 }
 
-console.log(sunny)// we will get undifined becuase sunny is inside the local scope and can not be access outside it
+//console.log(sunny)// we will get undifined becuase sunny is inside the local scope and can not be access outside it
 
 
 /*Closures: Functions that protects data. Or another way of saying it.
