@@ -4,6 +4,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 function triangles(num) {
+  var triangleBrick = "#";
+  for(var i = 1; i <= num; i++){
+    if(i > 1){
+      triangleBrick += "#";
+    }
+    console.log(triangleBrick);
+  }
 
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -11,7 +18,18 @@ function triangles(num) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function fizzBuzz(start, end) {
-  
+  // loop through range from start to end, 
+   for(let num = start; num <= end; num++){
+  if(num % 3 === 0 && num % 5 ===0){
+    console.log("fizzbuzz");
+  } else if (num % 3 === 0){
+    console.log("fizz");
+  } else if (num % 5 === 0){
+    console.log("buzz");
+  }else {
+    console.log(num);
+  }
+}
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -19,6 +37,21 @@ function fizzBuzz(start, end) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function drawChessboard(number) {
+  // create empty string
+  let line = "";
+  // loop through number
+  for (var y = 0; y < number; y++){
+    //loop through it again
+    for (var x = 0; x < number; x++){
+      if((x + y) % 2 === 0){
+        line += ' ';
+      } else {
+        line += '#'
+    }
+  }
+line += '\n';
+}
+console.log(line);
 
 }
 
