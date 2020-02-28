@@ -3,7 +3,7 @@
 'use strict';
 
 var customers = require('./data/customers.json');
-var _ = require("lodown-jonathanb824");
+var _ = require("lodown-jonathanb");
 
 /**
  * 1. Import your lodown module using the require() method,
@@ -35,7 +35,25 @@ var maleCount = function(array) {
 
 };
 
-var femaleCount;
+var femaleCount = function(array){
+//- **Objective**: Find the number of female customers
+// - **Input**: `Array`
+// - **Output**: `Number`
+ //- **Constraints**: use `reduce`
+ 
+ return _.reduce(array, function(previousResult, ladyCount){
+     if (ladyCount.gender === "female") {
+         return previousResult +1;
+     }
+     return previousResult;
+ },0);
+ 
+ 
+ 
+ 
+ 
+};
+
 
 var oldestCustomer;
 

@@ -109,6 +109,16 @@ _.first = function(array, number){
     
 };
 
+// if (array == null) 
+//       return void 0;
+//     if (number == null) {
+//       return array[0];
+//   } else if (number < 0) {
+//       return [];
+//       }else {
+//     return array.splice(0, number);
+//       }
+//   };
 
 
 
