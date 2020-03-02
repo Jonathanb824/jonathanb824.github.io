@@ -35,7 +35,7 @@
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    
+    // using our comparison operators and logical operators we can compare hour with the time of the day
      if (hour >= 0 && hour < 12){
        console.log ('Good Morning!');
     }else if (hour >= 12 && hour < 17){

@@ -65,7 +65,9 @@ function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 
  var re = / /gi ;
+ // using replace method, we can call it and replace the space with a dash
      var newstr = string.replace(re, "-");
+     // to we can use toLowerCase to make the string all lower case. 
   return newstr.toLowerCase();
 
     // YOUR CODE ABOVE HERE //
@@ -215,11 +217,14 @@ if (stringOne > stringTwo){
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+// first have to compare the strings to see which one is greater 
+// if string one is greater than string two return the number one
  if (stringOne > stringTwo){
        return 1;
+       // if string two is greater than string one than return negative one
    }else if (stringTwo > stringOne){
         return -1;
+        // else return zero
     }else {
         return 0;
     }
