@@ -51,7 +51,7 @@ const lastName = "Brown"; //  Notice how const have to be declare and initialize
 
 
 
-//hoisting: Is var & function declarations being moved to top of the code. JavaScript only hoists declarations. 
+//hoisting: Is a process when a function and variable declarations are added to memory during the compile phase. Variables and Function declarations are being moved to top of the code. JavaScript only hoists declarations. 
 
 hoisted = 10;
 console.log(hoisted);
