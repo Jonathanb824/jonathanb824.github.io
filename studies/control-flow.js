@@ -35,14 +35,14 @@ We can have as many else if statement we can desire. Checking as many conditions
 
 /*Else-If Example*/
 function makeMoney(ballin){
-if (ballin <= 1000000) {
-  return "Balling!!!";
-} else if (ballin <= 1000 && ballin >= 500) {
+if (ballin <= 1000000) { // To start a if statement we must start with the Keyword "if" next comes (Where we create a condition)
+  return "Balling!!!";    // after comes the curly braces{where a block of code run if the condition was true}
+} else if (ballin <= 1000 && ballin >= 500) { // If the test did not pass we can use else if to check another. We can have as many else if statement we want
   return "Poket Change";
 } else if (ballin <= 100 && ballin >= 50) {
   return "Pokets Hurt";
-}else {
-    return "Go get the Money!"
+}else { // The else statement is used as a default exit to a conditional statement if no test passed
+    return "Go get the Money!";
 }
 }
 makeMoney(20000000); //returns --> "Balling!!!" //

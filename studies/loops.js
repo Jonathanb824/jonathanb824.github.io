@@ -19,10 +19,11 @@
 /*While Loop example*/
 var i = 10;
 var total = 4;
-while (i < 30)
-{
-total += i;
-i++;
+
+while (i < 30) // while loops starts with the word while. next comes the condition
+{ // after the condition comes the code block
+total += i; // 
+i++; // increment until the condition is met
 }
 console.log(total); //
 
@@ -33,6 +34,12 @@ console.log(total); //
 
 var myArr = ["dog", "cat", "pizza"]
 
+// a for loop starts off with the word for 
+// next in parenthies comes ([initialExpression]; example var i = 0;
+// next comes the condition [condition]; example, check if i is less than myArr.length
+// [incrementExpression]) next we want to increment 1 until that i is no longer less than myArr.length
+// statement: in our code block we can use the console.log to print the values of i
+
 for (var i = 0; i < myArr.length; i++) {
     console.log(myArr[i]); // "dog", "cat", "pizza"
 }
@@ -42,16 +49,24 @@ for (var i = 0; i < myArr.length; i++) {
 
 
 /*For-In Loops*/
-/* The for-in loop are used with objects to access key/value pairs.*/
-/*Object:
+/* The for-in loop are used with objects to access key/value pairs.
+* loops through the properties of an object
 */
-//
+
+// syntax: for(key in object) {
+    // Code to be executed
+//}
+
+
+// example
+
 var obj = {
     title: "Can you Stand The Rain",
     artist: "New Edition",
     year : "1990"
 };
 
+// start with key word for, next ( var key in obj is the condition) {code block where we could print our values to the console}
 for (var key in obj) {
     console.log(obj[key]);
 }
@@ -60,7 +75,8 @@ for (var key in obj) {
 *    "New Edition"
 *    "1990" */
 
-
+// The counter is. "key" in the for-in loop. It is a string, not a number. 
+// It contains the name of current properties in the object
 
 
 //Looping over and array backwards//

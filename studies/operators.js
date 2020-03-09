@@ -99,7 +99,7 @@ num1 %= 3     // 1
 var colorEyes = "brown";
 var contactLensInfo = "You new contact lens just arrived and they are " + colorEyes;
 console.log(contactLensInfo); //adding the two strings together//
-//output would return "My name is Kandice. I am 34 years old."//
+//output would return "Your new contact lens just arrrived and they are brown"//
 
   5 + 6;  // -> addition
 
@@ -252,6 +252,7 @@ if (a > b) {
 
 /* Ternary operators
 *Is another way of prefroming if/else if statement. It shortens code block and it also assigns a value to a variable based on a condition.
+Anything between the ? and the : is what is executed if the condition evaluates to true, everything after the colon: runs after if the first condition is not met
 * Example:
 */
 

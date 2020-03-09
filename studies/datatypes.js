@@ -28,9 +28,17 @@ var coins2 = 2.25; // with a decimal
 
 /* 2. String
 * A string is a textual datatype that character holda an index. A string can hold text inside quotes"" or nothing inside quotes. 
+* How do we access characters in a string? By using charAt method, we cab access the character at the index we give it.
+* How are values stored in a string? Variables are containers for storing data values using the var key word followed by the name we want to assign our value, 
+* followed by the assigment operator then using single or double quoutes we place our text in between
 *For example:
 */
+
 var nameFirst = "Super JB"; // double quotes
+
+ nameFirst.charAt(2);
+ // I'll get back 'p', the character at index 2 of the String.
+
 var nameLast = 'Brown'; // single quotes
 var nothing = ""; //empty string
 
@@ -90,10 +98,11 @@ console.log(hot); // prints undefined to the console log
 */
 
 var carDealer = { company: "GMC", type: "Big Body", color: "Tan"};
-carDealer = "null"; // value is null but it is still an object
+carDealer = null; // value is null but it is still an object
 
 /* 9. NaN
 *NaN means not-a-number , when checking datatypes we can see if a value is NaN
+* It is also most likey to show NaN when Math functions fail
 *For Example:
 */
 isNaN("Hey"); // true

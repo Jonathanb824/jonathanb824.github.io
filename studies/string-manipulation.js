@@ -63,9 +63,9 @@ console.log(string2.toLowerCase(" ")); // "music makes me lose control!" //
 var string3 = "grand rising!";
 console.log(string3.toUpperCase(" ")); //"GRAND RISING!" //
 
-/*string.length()
-*This method let us know how many charaters are in our string.
+/*String.trim()
+*This method method removes whitespace from both sides of a string
 *Example
 */
-var string4 = "Today is a good day!";
-console.log(string4.length); // 20 //
+var string4 = "   Today is a good day!";
+console.log(string4.trim()); // "Today is a good day!"" //

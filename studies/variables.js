@@ -50,6 +50,22 @@ const lastName = "Brown"; //  Notice how const have to be declare and initialize
 // That's because const can not be change/ re-assign or re-delcared. It is constant
 
 
-  
 
+//hoisting: Is var & function declarations being moved to top of the code. JavaScript only hoists declarations. 
 
+hoisted = 10;
+console.log(hoisted);
+var hoisted;
+// 3
+
+// In the function, 
+// var l will be hoisted to the top of the scope first. The function above(). Next var d will be hoistied, then function moon()
+function above() {
+   var l = 40;
+   function moon() {
+       
+         var d = 80;
+         console.log(l + d);
+    }
+   return moon;
+}

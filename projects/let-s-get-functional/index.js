@@ -118,26 +118,54 @@ console.log(total, "Holla at cha king");
 // - **Input**: `Array`, `Letter`
 // - **Output**: `Number`
 // - **Constraints**:
-firstLetterCount(customers, 'D');
 
-var friendFirstLetterCount = (array, customer, letter) => {
-    //how many friends of a given customer have names that start with a given letter
-    //output is a number, so seed is a number
-    //access the names of friends in customer list
-    //test to see if first letter is strictly equal to given letter
-    //if true, then increment count by 1
-    //loop through Customer object and access names of friends, add to friendsArray
-    //create a friends Array
-   
-        let nameOfCustomer = customer;
-       
-//loop through the customer array and access the customer object, test to find given customer object
-        let givenCustomer;
-         _.each(array, customer => {
-            if(customer.name === nameOfCustomer) {
-                givenCustomer = customer;
-            }
-        });
+var firstLetterCount = function(array, letter){
+//Find how many customer's names begin with a given letter  
+//use map function
+//push elements of the customer at a particular index by name into the declared variable array
+//use the map function
+ 
+   var firstLetterArray = [];
+    var count = 0;
+
+
+    _.map(array, function(element, index, array){
+        firstLetterArray.push(customers[index].name);
+    });
+_.map(firstLetterArray, function(element, index, array){
+   if (firstLetterArray[index][0].toUpperCase() === letter.toUpperCase()){
+count++;
+
+   }
+});
+return count;
+};
+
+
+// - **Objective**: Find how many friends of a given customer have names that start with a given letter
+// - **Input**: `Array`, `Customer`, `Letter`
+// - **Output**: `Number`
+//- **Constraints**:
+
+var friendFirstLetterCount = function(array, customer, letter){
+    // using reduce we can return a number 
+return _.reduce(array, function(previous, current, index){
+    // check if the current name is equal to the customer 
+        if(current.name.toLowerCase() === customer.toLowerCase()){
+            // if so reduce the current friends, loop through that array, and compame the names again
+            return _.reduce(current.friends, function(previous, current, index){
+                if(current.name[0].toLowerCase() === letter.toLowerCase()){
+                    ++ previous;
+                } else {
+                    return previous;
+                }
+                    return previous; 
+            }, 0);
+        } else{
+            return previous;
+        }
+    }, 0);
+};
 
 var friendsCount = function(array, name){
 //Find the customers' names that have a given customer's name in their friends list    
@@ -164,7 +192,6 @@ var friendsCount = function(array, name){
 
 
 
-var topThreeTags = function(array){
 //Find the three most common tags among all customers' associated tags
 //{output}: need a number of occurences
 //three tags that are 'strings'. what can we use with reduce to give you a string and numbers?
@@ -176,35 +203,60 @@ var topThreeTags = function(array){
 //  create a variable to put the sorted keys.
 // Where a, b sorts from high to low where b is high, keep the first 3 and slice the rest
        
-
-   
-    var tagCount = _.reduce(array, (myObj, custObj) => {
-        _.each(custObj.tags, function(tagStr){
-             
-            if(myObj[tagStr] === undefined){
-                 
-                myObj[tagStr] = 1;
-           
-            } else{
-               
-                myObj[tagStr]++;
-            }
-        });
-        return myObj;
-       
-    }, {});
-   var arrayofKeys = Object.keys(tagCount);
-   var sortedArr = arrayofKeys.sort(function (a, b){
-       return tagCount[b] - tagCount[a];
-   }).slice(0,3);
-       
-   
-
-return sortedArr;
- 
+var topThreeTags = function(array){
+    let allTags = [];
+    let newTags =  _.reduce(array,function(prev,curr,i){
+      if(curr.tags !== undefined){
+          allTags.push(curr.tags);
+      }
+      return  [].concat(...allTags);
+    });
+    let tags = _.reduce(newTags,function(prev,curr){
+          if(prev[curr] === undefined){
+              prev[curr] = 1;
+          } else {
+              prev[curr]++;
+          } return prev;
+    },{});
+    let countArray = [];
+    _.each(tags,function(count, word, object){
+        countArray.push([word, count]);
+    });
+        countArray.sort(function(a,b){
+        return b[1] - a[1];
+    });
+    let topThree = [];
+    for(var i = 0; i < 3; i++){
+        topThree.push(countArray[i][0]);
+    } 
+    return topThree;
 };
+   
 
-var genderCount;
+var genderCount = function(array){
+//Create a summary of genders
+// create a variable using the reduce function
+// set condition to separate genders into (male, female, transgender)
+// return an object containing a count of each gender
+   
+    var genderObject = _.reduce(array, (genderLikeObject, customerElement) => {
+        if(customerElement.gender === "male") {
+           
+            genderLikeObject.male ++;
+           
+        } else if(customerElement.gender === "female") {
+            genderLikeObject.female ++;
+        } else {
+            genderLikeObject["non-binary"] ++;
+        }
+        return genderLikeObject;
+    }, { male: 0,
+    female: 0,
+    "non-binary": 0});
+
+   
+return genderObject;
+};
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
