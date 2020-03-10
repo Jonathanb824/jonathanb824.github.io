@@ -37,19 +37,24 @@ myVariable = "someString";
 /** We can declare and assign a variable using three keywords
  * var, let, const 
  */
+ 
+ 
+ 
 // Note: That we can delcare a variable using var, let and const.
 
 // For example
-
+console.log(firstName) // undefined
 var firstName; // varibales using var belong to the global scope if they are not created in a local scope. variables that are declare with var are hoisted to the top of code
 
+//console.log(middleName) // referenceError 
 let middleName; // When we delcare with let, let is confined to the local scope. The difference between var and let, is that let is initialized to a value only when assign.
                //  Accessing the variable before the initialization results in a ReferenceError
 
+//console.log(lastName) // referenceError
 const lastName = "Brown"; //  Notice how const have to be declare and initialized at the same time
 // That's because const can not be change/ re-assign or re-delcared. It is constant
 
-
+// const lastName = "White" throws an error
 
 //hoisting: Is a process when a function and variable declarations are added to memory during the compile phase. Variables and Function declarations are being moved to top of the code. JavaScript only hoists declarations. 
 

@@ -68,8 +68,15 @@ var obj = {
 
 // start with key word for, next ( var key in obj is the condition) {code block where we could print our values to the console}
 for (var key in obj) {
-    console.log(obj[key]);
+    console.log(obj[key]); // 
 }
+
+// to just print the keys using a for in loop I would just console.log(key)
+
+for (var key in obj) {
+    console.log(key); // 
+}
+
 /* prints to the console:
 *    "Can you stand the rain"
 *    "New Edition"
